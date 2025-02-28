@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Raylib-cs" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="BassLib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Bass.Net">
+      <HintPath>BassLib\Bass.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+	<Target Name="CopyBaseLibs" AfterTargets="Build">
+		<Copy SourceFiles="BassLib\bass.dll" DestinationFolder="$(SolutionDir)\DokaDokaR\bin\$(Configuration)\net8.0\" />
+		<Copy SourceFiles="BassLib\Bass.Net.dll" DestinationFolder="$(SolutionDir)\DokaDokaR\bin\$(Configuration)\net8.0\" />
+	</Target>
+
+</Project>
