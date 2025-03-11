@@ -62,6 +62,12 @@ class ExoImageObject : ExoObject
         Texture.Scale = Transfrom.Scale;
         Texture.Rotation = Transfrom.Rotation;
         Texture.Opacity = Transfrom.Opacity;
+
+
         Texture.DrawCenteredCoords(x + Transfrom.Position.X, y + Transfrom.Position.Y, null, null, Transfrom.ReverseX, Transfrom.ReverseY);
+        //Game.Gl.DrawElements()
+     //   DX.DrawGraph()
+       //  uint T =  Game.Gl.GenTexture();
+        
     }
 }

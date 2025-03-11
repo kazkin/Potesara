@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Raylib-cs" Version="7.0.0" />
+    <PackageReference Include="Silk.NET.OpenGLES" Version="2.22.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +19,18 @@
     <Reference Include="Bass.Net">
       <HintPath>BassLib\Bass.Net.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="BassLib\bass.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BassLib\Bass.Net.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BassLib\basswasapi.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 	<Target Name="CopyBaseLibs" AfterTargets="Build">

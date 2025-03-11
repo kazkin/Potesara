@@ -55,6 +55,8 @@ public class Texture : IDisposable
         Raylib.BeginBlendMode(BlendMode);
         Raylib.DrawTexturePro(RayTexture, source, new Rectangle(x, y, source.Width * scale.X, source.Height * scale.Y), origin, Rotation, color);
         Raylib.EndBlendMode();
+
+ //       DX.SetDrawBlendMode(BlendMode,255);
     }
 
     /// <summary>
