@@ -128,6 +128,15 @@ public class Counter
         // 間隔更新後、あまりがあるかもしれないのでもう一度カウンター値を更新する。
         Tick();
     }
+    public void ChangeInterval(double interval)
+    {
+        // 今までのカウンター値を更新する。
+        Tick();
+        // 間隔を更新する。
+        Interval = interval;
+        // 間隔更新後、あまりがあるかもしれないのでもう一度カウンター値を更新する。
+        Tick();
+    }
 
     /// <summary>
     /// タイマーの終了値を変更します。
